@@ -1,8 +1,11 @@
-// sources.js：优先级比较与合并判定（基线：一律说同级、给零）
+// sources.js：优先级比较与合并判定
 export function priorityOf(sources, name) {
-  return 0;
+  const priority = sources ? sources[name] : undefined;
+  return typeof priority === "number" ? priority : 0;
 }
 
 export function compare(priorityA, priorityB) {
+  if (priorityA < priorityB) return -1;
+  if (priorityA > priorityB) return 1;
   return 0;
 }
