@@ -1,0 +1,14 @@
+{
+  "budget": 2,
+  "sources": { "s1": 2, "s2": 2, "s3": 3 },
+  "source_error_code": "E_NO_SOURCE",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "values": {}, "conflicts": {}, "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "import", "source": "s1", "key": "k1", "value": 5 },
+    { "id": 2, "kind": "import", "source": "s2", "key": "k1", "value": 7 },
+    { "id": 3, "kind": "import", "source": "s1", "key": "k2", "value": 4 },
+    { "id": 4, "kind": "import", "source": "s2", "key": "k2", "value": 6 },
+    { "id": 5, "kind": "import", "source": "s3", "key": "k1", "value": 9 }
+  ]
+}
